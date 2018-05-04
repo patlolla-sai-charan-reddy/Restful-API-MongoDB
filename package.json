@@ -1,0 +1,16 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Simple book store app for practice",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "*",
+    "body-parser": "",
+    "mongoose": "*"
+  },
+  "author": "Sai Charan Patlolla",
+  "license": "ISC"
+}
