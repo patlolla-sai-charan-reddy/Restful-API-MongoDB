@@ -78,6 +78,19 @@ app.post('/api/books', function(req, res) {
 	})
 });
 
+// PUT Request
+app.put('/api/genres', function(req, res) {
+	var genre = req.body;
+	Genre.addGenre(genre, function(err, genre) {
+		if (err) {
+			throw errl
+		}
+		res.json(genre);
+	});
+});
+
+
+
 app.listen(4000);
 
 console.log('Running on port 4000');
