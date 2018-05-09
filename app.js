@@ -83,7 +83,7 @@ app.put('/api/genres', function(req, res) {
 	var genre = req.body;
 	Genre.addGenre(genre, function(err, genre) {
 		if (err) {
-			throw errl
+			throw err;
 		}
 		res.json(genre);
 	});
