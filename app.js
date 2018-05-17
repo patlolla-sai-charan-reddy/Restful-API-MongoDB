@@ -12,6 +12,7 @@ Book = require('./models/book')
 mongoose.connect('mongodb://localhost/bookstore');
 var db = mongoose.connection;
 
+// Example for the GET call
 app.get('/', function(req, res) {
 	res.send('Please use /api/books or /api/genre.');
 });
@@ -30,6 +31,16 @@ app.get('/api/genres', function(req, res) {
 });
 
 app.get('/api/books', function(req, res) {
+	Book.getBooks(function(err, books) {
+		if (err) {
+			throw err;
+		}
+		res.json(books)
+	})
+});
+
+// For example, not to be considered for practice
+app.get('/api/bookstoPost', function(req, res) {
 	Book.getBooks(function(err, books) {
 		if (err) {
 			throw err;
